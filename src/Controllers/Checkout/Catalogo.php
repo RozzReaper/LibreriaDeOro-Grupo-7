@@ -10,7 +10,7 @@
  * @version  CVS:1.0.0
  * @link     http://url.com
  */
- namespace Controllers\Checkout;
+namespace Controllers\Checkout;
 
 // ---------------------------------------------------------------
 // Sección de imports
@@ -36,7 +36,7 @@ class Catalogo extends PrivateController
     public function run():void
     {
         // code
-        $producto = \Dao\Productos::getAll();
+        $producto = \Dao\LibrosDao::getProducts();
         $carretilla = \Dao\Carretilla::getAll(\Utilities\Security::getUserId());
 
         $carrAssoc = array();
